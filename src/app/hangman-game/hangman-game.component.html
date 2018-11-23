@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <div *ngIf="message">
+    <ngb-alert [dismissible]="false" type="{{type}}">{{message}}</ngb-alert>
+  </div>
+  
+  <ul>
+      <li class="test">Le mot à deviner est : </li>
+    <li class="test" *ngFor="let mot of arrayVide">
+     {{mot}}
+    </li>
+  </ul>
+  
+  <ul>
+          <li class="test" *ngFor="let letter of alphabet">
+                 <button type="submit" class="btn btn-info {{disabled}}" (click)="disabled || letterClick(letter)"> {{letter}}</button>
+                 </li>
+  </ul>
+  
+  <p><ngb-progressbar type="success" value="{{progress}}" [striped]="true" [animated]="true"><i>{{progress}}%</i></ngb-progressbar></p>
+  <div *ngIf="relaunchButton">
+    <button type="submit" class="btn btn-warning" (click)="reload()">Continuer</button>
+  </div>
+  </div>
