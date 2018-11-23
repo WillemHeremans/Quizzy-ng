@@ -3,16 +3,16 @@
     <ngb-alert [dismissible]="false" type="{{type}}">{{message}}</ngb-alert>
   </div>
   
-  <ul>
-      <li class="test">Le mot à deviner est : </li>
-    <li class="test" *ngFor="let mot of arrayVide">
+  <ul class="list-inline">
+      <li class="list-inline-item">Le mot à deviner est : </li>
+    <li class="list-inline-item" *ngFor="let mot of arrayVide">
      {{mot}}
     </li>
   </ul>
   
-  <ul>
-          <li class="test" *ngFor="let letter of alphabet">
-                 <button type="submit" class="btn btn-info {{disabled}}" (click)="disabled || letterClick(letter)"> {{letter}}</button>
+  <ul class="list-inline">
+          <li class="list-inline-item" *ngFor="let letter of alphabet">
+                 <button type="submit" class="btn btn-info list-inline-item {{disabled}}" (click)="disabled || letterClick(letter)"> {{letter}}</button>
                  </li>
   </ul>
   

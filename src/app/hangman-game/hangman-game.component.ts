@@ -19,9 +19,9 @@ export class HangmanGameComponent implements OnInit  {
   arrayMot = [];
   alphabet = [];
   point = this.globals.point;
-  message = '';
+  message = 'Cliquez sur une lettre pour compléter le mot mystère...';
   disabled = '';
-  type = '';
+  type = 'warning';
   progress = 0;
   relaunchButton = '';
 
@@ -44,6 +44,8 @@ export class HangmanGameComponent implements OnInit  {
         this.globals.pointCount('+');
         this.progress = 100;
         this.disabled = 'disabled';
+        this.type = 'warning';
+        this.message = 'Cliquez sur \'Continuer\' pour deviner un nouveau mot...';
         this.relaunchButton = 'ok';
 
       } else {
