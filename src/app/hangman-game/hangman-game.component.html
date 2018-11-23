@@ -2,20 +2,17 @@
   <div *ngIf="message">
     <ngb-alert [dismissible]="false" type="{{type}}">{{message}}</ngb-alert>
   </div>
-  
   <ul class="list-inline">
       <li class="list-inline-item">Le mot à deviner est : </li>
     <li class="list-inline-item" *ngFor="let mot of arrayVide">
      {{mot}}
     </li>
   </ul>
-  
   <ul class="list-inline">
           <li class="list-inline-item" *ngFor="let letter of alphabet">
                  <button type="submit" class="btn btn-info list-inline-item {{disabled}}" (click)="disabled || letterClick(letter)"> {{letter}}</button>
                  </li>
   </ul>
-  
   <p><ngb-progressbar type="success" value="{{progress}}" [striped]="true" [animated]="true"><i>{{progress}}%</i></ngb-progressbar></p>
   <div *ngIf="relaunchButton">
     <button type="submit" class="btn btn-warning" (click)="reload()">Continuer</button>
