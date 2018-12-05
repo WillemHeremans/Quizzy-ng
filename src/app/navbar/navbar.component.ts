@@ -10,7 +10,7 @@ export class NavbarComponent implements OnInit {
 
   point = 0;
 
-  constructor( private globals: GlobalsService) { }
+  constructor( public globals: GlobalsService) { }
 
   ngOnInit() {
   }
