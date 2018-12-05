@@ -5,7 +5,7 @@ import { HangmanGameComponent } from './hangman-game/hangman-game.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/hangman', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'hangman', component: HangmanGameComponent },
   { path: 'nav', component: NavbarComponent },
